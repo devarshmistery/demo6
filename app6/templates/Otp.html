@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+form {border: 3px solid #f1f1f1;}
+
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+button {
+  background-color:#003366;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+h2 {
+  color:  #cc0000;
+  text-align: center;
+}
+.cancelbtn {
+  width: auto;
+  padding: 6px 17px;
+  background-color: #ff0000;
+}
+.otpbtn {
+  width: auto;
+  text-align: center;
+  padding: 10px 22px;
+  margin: 0px 1200px;
+  color: Black;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #00ffaa; 
+  }
+
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+}
+.container {
+  padding: 16px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 10px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+  .otpbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<h2>Forget Password</h2>
+
+<form  method="POST">
+  {% csrf_token %}
+  <div class="imgcontainer">
+
+  </div>
+  <div class="container">
+    
+
+    <label for="Phone"><b>OTP</b></label>   
+    <input type="text" name="otp" placeholder="enter your otp"  required>     
+
+    <button type="submit">Reset Password <a href="{% url 'home' %}"></a></button>
+    <label>
+      <input type="checkbox" checked="checked" name="remember"> Remember me
+    </label> 
+ <label>
+    <button type="button" class="otpbtn"> send OTP</button>
+    </label>
+  </div>
+
+  <div class="container" style="background-color:#f1f1f1">
+    <button type="button" href="{% url 'home' %}" class="cancelbtn">Cancel</button>
+
+    <span class="psw">Go back to <a href="{% url 'home' %}">Home</a> page</span>
+  </div>
+</form>
+
+</body>
+</html>

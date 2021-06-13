@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <title>Dashboard - OSMS</title>
+<div class="row mt-4">
+  <div class="col-lg-7 mb-lg-0 mb-4">
+    <div class="card">
+      <div class="card-body p-3">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="d-flex flex-column h-100">
+              <p class="mb-1 pt-2 text-bold">Built by Mahek and Kairvi</p>
+              <h5 class="font-weight-bolder">Online Society Management Dashboard</h5>
+              <p class="mb-5">From features, conflicts that arise within the society and providing facilities, you will find all things for society happenings and on goings..</p>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-5 ms-auto text-center mt-5 mt-lg-0">
+            <div class="bg-gradient-primary border-radius-lg h-100">
+              <img src="https://demos.creative-tim.com/soft-ui-dashboard/assets/img/illustrations/rocket-white.png" class="position-absolute h-100 w-50 top-0 d-lg-block d-none" alt="waves">
+              <div class="position-relative d-flex align-items-center justify-content-center h-100">
+                <img class="w-100 position-relative z-index-2 pt-4" src="https://demos.creative-tim.com/soft-ui-dashboard/assets/img/illustrations/rocket-white.png">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<title>ADMIN -Dashboard</title>
+      <section class="counters">
+        <div class="container">
+          <div>
+            <i class="fab fa-youtube fa-4x"></i>
+            <div class="counter" data-target="60000">0</div>
+            <h3>User</h3>
+          </div>
+          <div>
+            <i class="fab fa-twitter fa-4x"></i>
+            <div class="counter" data-target="15000">0</div>
+            <h3>Followers</h3>
+          </div>
+          <div>
+            <i class="fab fa-facebook fa-4x"></i>
+            <div class="counter" data-target="9000">0</div>
+            <h3>Members</h3>
+          </div>
+          <div>
+            <i class="fab fa-linkedin fa-4x"></i>
+            <div class="counter" data-target="5000">0</div>
+            <h3>Viewed pages</h3>
+          </div>
+        </div>
+</section>
+      <script>
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200;
+        
+        counters.forEach(counter => {
+          const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+        
+            const inc = target / speed;
+        
+            // Check if target is reached
+            if (count < target) {
+              counter.innerText = count + inc;
+              setTimeout(updateCount, 1);
+            } else {
+              counter.innerText = target;
+            }
+          };
+          updateCount();
+        }); 
+        </script>
+
+
+<style>
+.row>* {
+    flex-shrink: 0;
+    width: 100%;
+    margin-left:90px;
+    margin-right:-20px;
+    margin-top: 10px;
+}
+html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+*, :after, :before {
+    box-sizing: border-box;
+}
+.card {
+    box-shadow: 0 20px 27px 0 rgb(0 0 0 / 2%);
+    width:420px;
+    height:300px;
+    margin-left: 420px;
+}
+.card {
+    position:relative;
+    flex-direction: column;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    margin-top: 260px;
+    border-color: solid rgb(179, 128, 255);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.card .card-body {
+    font-family: "Segoe UI","Orelega One","Segoe UI Emoji","Segoe UI Symbol";
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-column {
+    flex-direction: column!important;
+}
+.d-flex {
+    display: flex!important;
+}
+.pt-2 {
+    padding-top: 0.023rem!important;
+}
+.text-bold {
+    font-weight: 800;
+    font-size:20px;
+    font-family: "Anton";
+}
+.mb-1 {
+    margin-bottom: -0.3rem!important;
+}
+p {
+    font-weight: 500;
+    margin-top: -0.2rem;
+    display: block;
+    font-family: "Orelega One";
+}
+.lead, .p, p {
+    font-weight: 400;
+}
+h5 {
+    display: block;
+    font-size: 0.90rem;
+    font-weight: bold;
+}
+.font-weight-bold {
+    font-weight: 600!important;
+}
+.text-sm {
+    font-size: .875rem!important;
+}
+.text-body {
+    color: #67748e!important;
+}
+a {
+    letter-spacing: -.025rem;
+    color: #000;
+}
+.border-radius-lg {
+    border-radius: .75rem;
+}
+.bg-gradient-primary {
+    background-image: linear-gradient(310deg,#7928ca,#ff0080);
+}
+.h-100 {
+    height: 100%!important;
+}
+.w-50 {
+    width: 60%!important;
+}
+.w-100 {
+    width: 90px!important;
+}
+.d-none {
+    display: none!important;
+}
+.align-items-center {
+    align-items: center!important;
+}
+.justify-content-center {
+    justify-content: center!important;
+}
+.z-index-2 {
+    z-index: 2!important;
+}
+.pt-4 {
+    padding-top: 1rem!important;
+}
+img, svg {
+    vertical-align: middle;
+    
+}.ms-auto {
+    margin-left: auto!important;
+}
+.mt-5 {
+    margin-left: 90px!important;
+}
+.row {
+    flex-shrink: 0;
+    width: 60%;
+    margin-left:10px;
+    margin-bottom: -15px;
+}
+
+</style>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  <div class="sidenav">
+  <a href="{% url 'admindashboard' %}">Dashboard</a>
+  
+  
+  <button class="dropdown-btn">Notice Board
+  <i class="fa fa-angle-down"></i>
+  </button>
+  <div class="dropdown-container">
+  <a href="{% url 'notice' %}">Notices</a>
+  <a href="{% url 'viewnotice' %}">View All Notice</a>
+  </div>
+  
+  <button class="dropdown-btn">My Account
+  <i class="fa fa-caret-down"></i>
+  </button>
+
+  <div class="dropdown-container">
+	<a href="{% url 'profile' %}">Account</a>
+	<a href="{% url 'disprofile_data' %}">Viewprofile</a>
+  </div>
+
+  <button class="dropdown-btn">Manage Users
+  <i class="fa fa-angle-down"></i>
+  </button>
+
+  <div class="dropdown-container">
+	<a href="{% url 'loginlog' %}">User Login Log</a>
+  </div>
+   
+  <button class="dropdown-btn">Complaints
+  <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+	<a href="{% url 'complaint' %}">Register Complaint</a>
+	<a href="{% url 'viewcomplaint' %}">View Complaints</a>
+  </div>
+	<script>var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}</script>
+<style>
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 50px;
+}
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #f1f1f1;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  font-size 1rem;
+  outline: none;
+}
+
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #7571f9;
+}
+
+.main {
+  margin-left: 100px; 
+  font-size: 20px;
+  padding: 0px 10px;
+}
+
+.active {
+  background-color: #000000;
+    color: white;
+}
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+</style>
+
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+  
+  body {
+    font-family: 'Roboto', sans-serif;    
+    background: url('https://i.pinimg.com/originals/3c/24/46/3c24462450c2a902bf7e18f3d9aada81.jpg');
+    flex-direction: column;
+    height: 80vh;
+  }
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+  }
+  header {
+    flex: 1;
+    height: 70%;
+  }
+  header h1 {
+    font-size: 60px;
+  }
+  .counters {
+    background: #0f479a;
+    color: #fff;
+    padding: 20px 10px;
+    margin-top: -600px;
+    margin-left:120px;
+    padding-left: auto;
+    border-top: 1px lightskyblue solid;
+  }
+  
+  .counters .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+    text-align: center;
+  }
+  .counters i {
+    color: lightskyblue;
+    margin-bottom: 2px;
+  }
+  .counters .counter {
+    font-size: 45px;
+    margin: 10px 10px;
+  }
+  @media (max-width: 700px) {
+    .counters .container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .counters .container > div:nth-of-type(1),
+    .counters .container > div:nth-of-type(2) {
+      border-bottom: 1px lightskyblue solid;
+      padding-bottom: 20px;
+    }
+  }
+  </style>
+  

@@ -1,0 +1,385 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>View all the Notice</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Template Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+</head>
+<body>
+
+<div class="row"  style="margin-right:-200px; margin-top:-80px;">
+<div class="col-md-12">
+<h1>Notice Board</h1>
+</div>
+</div>
+{% for i in notice %}
+<div class="notice">
+<div class="container">
+<div class="row">
+<div class="col-md-12">
+<div class="event_date">
+<div class="event-date-wrap">
+<p>{{ i.date }}</p>
+<span></span>
+</div>
+</div>
+<div class="date-description">
+<h3>{{ i.Nsubject }}</h3>
+<p>{{ i.Nnotice }}</p>
+<hr class="event_line">
+</div>
+{% endfor %}
+<div class="event_date">
+<div class="event-date-wrap">
+<p>06</p>
+<span>Nov.17</span>
+</div>
+</div>
+<div class="date-description">
+<h3>University Admissions 2018-19</h3>
+<p>Lorem Ipsum is simply dummy text of the printing and <a href="#">typesetting industry</a>. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<body>
+</html>
+<style>
+
+@media (min-width: 768px)
+.container {
+    width: 720px;
+    max-width: 100%;
+}
+@media (min-width: 576px)
+.container {
+    width: 540px;
+    max-width: 100%;
+}
+@media (min-width: 768px)
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+@media (min-width: 576px)
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.container {
+    position: relative;
+    margin-left: auto;
+}
+*, ::after, ::before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+div {
+    display: block;
+}
+body {
+    font-family: lora,serif;
+}
+body {
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 80px 10px;
+    padding-left: 170px;
+    color: #292b2c;
+    background-color: #fff;
+}
+html {
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+html {
+    font-family: sans-serif;
+    line-height: 1.15;
+}
+*, ::after, ::before {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+@media (min-width: 768px)
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+@media (min-width: 576px)
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+@media (min-width: 768px)
+.col-md-12 {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 100%;
+    -ms-flex: 0 0 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+@media (min-width: 768px)
+.col,.col-12,.col-md,.col-md-12{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+@media (min-width: 576px)
+.col-12,.col-md,.col-md-12{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.col-md-12 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.event_date {
+    width: 82px;
+    background: #665c7c;
+    float: left;
+    text-align: center;
+    border-radius: 2px;
+}
+.date-description {
+    margin-left: 115px;
+}
+.date-description h3 {
+    margin-top: 0;
+    font-weight: 600;
+    margin-bottom: 25px;
+    margin: 0px 20px;
+    position: relative;
+}
+h1{
+    text-align: center;
+    font-weight: 600;
+    font-size: 4.5rem;
+    margin-right:90px;
+    color: #a35559 !important;
+    font-family: Merriweather;
+}
+h3 {
+    font-size: 24px;
+}
+.h3, h3 {
+    font-size: 1.75rem;
+}
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-bottom: .5rem;
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+}
+p {
+    font-size: 17px;
+}
+p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+.event_line {
+    margin: 40px 0;
+}
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+hr {
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+}.event_date {
+    width: 82px;
+    background: #665c7c;
+    float: left;
+    margin-left: 75px;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 2px;
+}
+.event-date-wrap p {
+    font-size: 23px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0;
+}
+.event-date-wrap {
+    border: 1px dashed #8d84a0;
+    margin: 8px;
+    padding: 4px 0;
+}
+.event-date-wrap span {
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+}
+.date-description {
+    margin-left: 200px;
+}
+
+.notice{padding:97px 0}
+.notice-wrap{border-bottom:1px solid #eaeaea;
+padding:0 0 20px;margin:20px 0}
+.notice-wrap img{margin:0 0 10px}
+.notice-wrap h4{font-weight:600}
+.notice-wrap span{color:#cbb58b}
+.speech{padding:97px 0}
+
+.speech h2{font-weight:600;
+    line-height:1.3;
+    position:relative;
+
+.speech h2:after{content:"";
+    position:absolute;
+    height:5px;
+    width:52px;
+    background:#cbb58b;
+    left:0;
+    bottom:0;
+    margin:7px 0 0}
+
+.speech p{
+    line-height:1.8;
+    margin:30px 0}
+</style>
+
+<link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  <div class="sidenav">
+  <a href="{% url 'admindashboard' %}">Dashboard</a>
+  
+  
+  <button class="dropdown-btn">Notice Board
+  <i class="fa fa-angle-down"></i>
+  </button>
+  <div class="dropdown-container">
+  <a href="{% url 'notice' %}">Notices</a>
+  <a href="{% url 'viewnotice' %}">View All Notice</a>
+  </div>
+  
+  <button class="dropdown-btn">My Account
+  <i class="fa fa-caret-down"></i>
+  </button>
+
+  <div class="dropdown-container">
+	<a href="{% url 'profile' %}">Account</a>
+	<a href="{% url 'viewprofile' %}">Viewprofile</a>
+  </div>
+
+  <button class="dropdown-btn">Manage Users
+  <i class="fa fa-angle-down"></i>
+  </button>
+
+  <div class="dropdown-container">
+	<a href="{% url 'loginlog' %}">User Login Log</a>
+  </div>
+   
+  <button class="dropdown-btn">Complaints
+  <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+	<a href="{% url 'complaint' %}">Register Complaint</a>
+	<a href="{% url 'viewcomplaint' %}">View Complaints</a>
+  </div>
+	<script>var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}</script>
+</body>
+</html>
+
+<style>
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 50px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #f1f1f1;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  font-size 1rem;
+  outline: none;
+}
+
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #7571f9;
+}
+
+.main {
+  margin-left: 100px; 
+  font-size: 20px;
+  padding: 0px 10px;
+}
+
+.active {
+  background-color: #000000;
+    color: white;
+}
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+</style>
+  </body>
+</html>

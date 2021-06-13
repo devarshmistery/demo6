@@ -1,0 +1,326 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<body>
+
+{% for i in userlog %} 
+<div class="profile-card">
+    <header>
+      <a href="http://kanishkkunal.in">
+        <img src="https://0.gravatar.com/avatar/bb9bf20fb6f55b4af10b0f98c540075f?s=150">
+      </a>
+
+      <h1>{{ i.name }}</h1><br>
+      <h2>{{ i.phone }}</h2>
+    </header>
+    
+    <div class="profile-bio">
+      <p>{{ i.Email }}</p>
+    </div>
+    </div>
+{% endfor %}
+{% comment %}   
+    <!-- some social links to show off -->
+    <ul class="profile-social-links">
+  
+      <!-- twitter - el clásico  -->
+      <li>
+        <a href="https://twitter.com/kanihkkunal">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/social-twitter.svg">
+        </a>
+      </li>
+  
+      <!-- envato – use this one to link to your marketplace profile -->
+      <li>
+        <a href="http://themeforest.net/user/kanishkkunal">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/social-envato.svg">
+        </a>
+      </li>
+  
+      <!-- codepen - your codepen profile-->
+      <li>
+        <a href="https://codepen.io/kanishkkunal">
+          <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/210284/social-codepen.svg">
+        </a>
+      </li>
+    </ul> {% endcomment %}
+  </aside>
+  <style>
+      /* go on then, styles go here.. knock yourself out! */
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400);
+@-webkit-keyframes pulsate {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+@keyframes pulsate {
+  0% {
+    transform: scale(0.6, 0.6);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1, 1);
+    opacity: 0;
+  }
+}
+body {
+  background-color: #1962db;
+  background-repeat: repeat, no-repeat;
+  background-size: auto, 90% 90%;
+  background-attachment: fixed;
+  color: #ecf0f1;
+  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  min-height: 50%;
+  width: 100%;
+}
+
+h1, h2 {
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.profile-card {
+  height: 300px;
+  width: 420px;
+  position: relative;
+  margin: 265px;
+  background-repeat: no-repeat;
+  float:left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right:-10%;
+}
+.profile-card header {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr="#cc000000", endColorstr="#00000000",GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
+}
+.profile-card header a {
+  position: relative;
+}
+.profile-card header a:before {
+  content: "";
+  border: 15px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  height: 90px;
+  width: 100px;
+  position: absolute;
+  left: 0;
+  bottom: 3px;
+  -webkit-animation: pulsate 1.6s ease-out;
+          animation: pulsate 1.6s ease-out;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  opacity: 0;
+  z-index: 99;
+}
+.profile-card header img {
+  position: relative;
+  border-radius: 50%;
+  height: 90px;
+  width: 90px;
+  padding: 0;
+  margin: 0;
+  border: 15px solid transparent;
+  margin-top: 12px;
+  z-index: 9999;
+  transition: all 0.3s ease-out;
+}
+.profile-card header a:hover img {
+  transform: scale(1.06, 1.06);
+}
+.profile-card header a:hover:before {
+  -webkit-animation: none;
+          animation: none;
+}
+.profile-card header h1 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 400;
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+.profile-card header h2 {
+  font-size: 18px;
+  margin-top: 0;
+  opacity: 0.9;
+}
+.profile-card .profile-bio {
+  position: absolute;
+  bottom: 0;
+}
+.profile-card .profile-bio p {
+  margin: 24px;
+  text-align: center;
+  opacity: 0.9;
+}
+.profile-card .profile-social-links {
+  position: relative;
+  background-color: white;
+  margin: 0 auto;
+  text-align: center;
+  padding: 6px 0;
+}
+.profile-card .profile-social-links li {
+  display: inline-block;
+  padding: 3px 5px 0;
+}
+.profile-card .profile-social-links li img {
+  height: 28px;
+  opacity: 0.8;
+  transition: all 0.2s ease-out;
+}
+.profile-card .profile-social-links li a:hover img {
+  opacity: 1;
+  transform: scale(1.1, 1.1);
+}
+.profile-card .profile-social-links:after {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(255, 255, 255, 0);
+  border-bottom-color: #ffffff;
+  border-width: 10px;
+  margin-left: -10px;
+}
+  </style>
+
+
+<link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  <div class="sidenav">
+  <a href="{% url 'admindashboard' %}">Dashboard</a>
+  
+  
+  <button class="dropdown-btn">Notice Board
+  <i class="fa fa-angle-down"></i>
+  </button>
+  <div class="dropdown-container">
+  <a href="{% url 'notice' %}">Notices</a>
+  <a href="{% url 'viewnotice' %}">View All Notice</a>
+  </div>
+  
+  <button class="dropdown-btn">My Account
+  <i class="fa fa-caret-down"></i>
+  </button>
+
+  <div class="dropdown-container">
+	<a href="{% url 'profile' %}">Account</a>
+	<a href="{% url 'disprofile_data' %}">Viewprofile</a>
+  </div>
+
+  <button class="dropdown-btn">Manage Users
+  <i class="fa fa-angle-down"></i>
+  </button>
+
+  <div class="dropdown-container">
+	<a href="{% url 'loginlog' %}">User Login Log</a>
+  {% comment %} <a href="">Add Member</a> {% endcomment %}
+  </div>
+   
+  <button class="dropdown-btn">Complaints
+  <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+	<a href="{% url 'complaint' %}">Register Complaint</a>
+	<a href="{% url 'viewcomplaint' %}">View Complaints</a>
+  </div>
+	<script>var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}</script>
+</body>
+</html>
+
+<style>
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 50px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #f1f1f1;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  font-size 1rem;
+  outline: none;
+}
+
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #7571f9;
+}
+
+.main {
+  margin-left: 100px; 
+  font-size: 20px;
+  padding: 0px 10px;
+}
+
+.active {
+  background-color:#F3F3F9;
+  color: white;
+}
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+</style>
+  </body>
+</html>

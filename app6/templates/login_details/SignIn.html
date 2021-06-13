@@ -1,0 +1,650 @@
+<style>*, *:before, *:after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  width:100%;
+  height:100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: -webkit-linear-gradient(left, #9260db, #e524ef);
+  font-family: "monospace";
+}
+input,button{
+  border:none;
+  outline:none;
+  background:none;
+}
+.tip {
+text-align: top;
+font-size: 20px;
+}
+.cont{
+  overflow:hidden;
+  position:relative;
+  width:900px;
+  height:550px;
+  background:#fff;
+}
+.form{
+  position:relative;
+  width:640px;
+  height:100px;
+  padding:50px 30px;
+  -webkit-transition:-webkit-transform 1.2s ease-in-out;
+  transition:-webkit-transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out;
+  transition: transform 1.2s ease-in-out; 
+  -webkit-transform :1.2s ease-in-out;
+}
+h2{
+width: 100%;
+font-size: 30px;
+text-align: center;
+}
+label{
+  display:block;
+  width:260px;
+  margin:16.5px auto;
+  text-align:center;
+  font-family: "Montserrat";
+}
+label span{
+  font-size:14px;
+  font-weight:600;
+  color: #505f75;
+  text-transform: uppercase;
+}
+
+input{
+display: block;
+width: 100%;
+margin-top: 5px;
+font-size: 16px;
+padding-bottom: 5px;
+border-bottom: 1px solid rgba(109, 93, 93, 0.4);
+text-align: center;
+font-family: "monospace"; 
+}
+button{
+  display: block;
+  margin: 0 auto;
+  width:260px;
+  height:40px;
+  border-radius:30px;
+  color:#fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+.submit{
+  margin-top: 30px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-family: 'monospace';
+  background: -webkit-linear-gradient(left, #9260db, #e524ef);
+}
+.submit:hover{
+  background: -webkit-linear-gradient(left, #e524ef, #9260db);
+}
+.forget-pass{
+  text-align:center;
+  font-size: 14px;
+  margin-top: 30px;
+  font-weight:600;
+  color: #0c0101;
+  cursor: pointer;
+  margin: 50px;
+}
+.forget-pass:hover{
+  color:red;
+}
+.fa {
+padding: 10px;
+font-size: 30px;
+width: 30px;
+text-align: center;
+text-decoration: none;
+margin: 5px 8px;
+border-radius: 20%;
+display: block; 
+transition: all 0.5s ease;   
+}
+.fa:hover {
+  opacity: 1.2;
+}
+.fa-facebook {
+background: #3B5998;
+color: white;
+}
+.fa-twitter {
+background: #55ACEE;
+color: white;
+}
+.fa-linkedin {
+background: #007bb5;
+color: white;
+}
+.fa-instagram {
+background: -webkit-linear-gradient(bottom right,#8414a6,#d93235,#ff7300,#f22998,#d93235);
+color: white;
+}
+.sub-cont{
+overflow: hidden;
+position: absolute;
+left: 640px;
+top: 0;
+width: 900px;
+height: 100%;
+padding-left: 260px;
+background: #fff;
+-webkit-transition: -webkit-transform 1.2s ease-in-out;
+transition: -webkit-transform 1.2s ease-in-out;
+transition: transform 1.2s ease-in-out;
+}
+
+.cont.s-signup .sub-cont{
+-webkit-transform:translate3d(-640px, 0, 0);
+        transform:translate3d(-640px, 0, 0);
+}
+
+.img{
+overflow: hidden;
+z-index: 2;
+position: absolute;
+left: 0;
+top: 0;
+width: 260px;
+height: 100%;
+padding-top: 360px;
+}
+
+.img:before{
+content: '';
+position: absolute;
+right: 0;
+top: 0;
+width: 900px;
+height: 100%;
+background-image: url("https://images.pexels.com/photos/5524164/pexels-photo-5524164.jpeg?cs=srgb&dl=pexels-clayton-bunn-5524164.jpg&fm=jpg"); 
+background-size: cover;
+transition: -webkit-transform 1.2s ease-in-out;
+transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+
+.img:after{
+content: '';
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+background: rgba(0,0,0,0.3);
+}
+
+.cont.s-signup .img:before{
+-webkit-transform:translate3d(640px, 0, 0);
+        transform:translate3d(640px, 0, 0);
+}
+
+.img-text{
+z-index: 2;
+position: absolute;
+left: 0;
+top: 50px;
+width: 100%;
+padding: 0 20px;
+text-align: center;
+color: #fff;
+-webkit-transition:-webkit-transform 1.2s ease-in-out;
+transition: -webkit-transform 1.2s ease-in-out;
+transition: transform 1.2s ease-in-out, -webkit-transform 1.2s ease-in-out;
+}
+
+.img-text h2{
+margin-bottom: 15px;
+font-weight: normal;
+}
+
+.img-text p{
+font-size: 14px;
+line-height: 2.0;
+}
+
+.cont.s-signup .img-text.m-up{
+-webkit-transform:translateX(520px);
+        transform:translateX(520px);
+}
+
+.img-text.m-in{
+-webkit-transform:translateX(-620px);
+        transform:translateX(-620px);
+}
+
+.cont.s-signup .img-text.m-in{
+-webkit-transform:translateX(0);
+        transform:translateX(0);
+}
+
+
+.sign-in{
+padding-top: 65px;
+-webkit-transition-timing-function:ease-out;
+        transition-timing-function:ease-out;
+}
+
+.cont.s-signup .sign-in{
+-webkit-transition-timing-function:ease-in-out;
+        transition-timing-function:ease-in-out;
+-webkit-transition-duration:1.2s;
+        transition-duration:1.2s; 
+-webkit-transform:translate3d(640px, 0, 0);
+        transform:translate3d(640px, 0, 0);
+}
+
+.img-btn{
+overflow: hidden;
+z-index: 2;
+position: relative;
+width: 100px;
+height: 36px;
+margin: 0 auto;
+background: transparent;
+color: #fff;
+text-transform: uppercase;
+font-size: 15px;
+cursor: pointer;
+}
+
+.img-btn:after{
+content: '';
+z-index: 2;
+position: absolute;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+border: 2px solid #fff;
+border-radius: 30px;
+}
+
+.img-btn span{
+position: absolute;
+left: 0;
+top: 0;
+display: -webkit-box;
+display: flex;
+-webkit-box-pack:center;
+justify-content: center;
+align-items: center;
+width: 100%;
+height: 100%;
+-webkit-transition:-webkit-transform 1.2s;
+transition: -webkit-transform 1.2s;
+transition: transform 1.2s;
+transition: transform 1.2s, -webkit-transform 1.2s;;
+}
+
+.img-btn span.m-in{
+-webkit-transform:translateY(-72px);
+        transform:translateY(-72px);
+}
+
+.cont.s-signup .img-btn span.m-in{
+-webkit-transform:translateY(0);
+        transform:translateY(0);
+}
+
+.cont.s-signup .img-btn span.m-up{
+-webkit-transform:translateY(72px);
+        transform:translateY(72px);
+}
+
+.sign-up{
+-webkit-transform:translate3d(-900px, 0, 0);
+        transform:translate3d(-900px, 0, 0);
+}
+
+.cont.s-signup .sign-up{
+-webkit-transform:translate3d(0, 0, 0);
+        transform:translate3d(0, 0, 0);
+}
+
+wrapper{
+overflow: hidden;
+max-width: 390px;
+background: #fff;
+padding: 30px;
+border-radius: 5px;
+box-shadow: 0px 15px 20px rgba(0,0,0,0.1);
+}
+.wrapper .title-text{
+display: flex;
+width: 200%;
+}
+.wrapper .title{
+width: 50%;
+font-size: 35px;
+font-weight: 600;
+text-align: center;
+transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.wrapper .slide-controls{
+position: absolute;
+display: flex;
+height: 70px;
+width: 80%;
+overflow: hidden;
+margin: 30px 50 10px 0;
+justify-content: space-between;
+border: 1px solid lightgrey;
+border-radius: 5px;
+margin-top: -46px;
+
+}
+.slide-controls .slide{
+height: 100%;
+width: 100%;
+color: #fff;
+font-size: 18px;
+font-weight: 500;
+margin-top: 12;
+
+text-align: center;
+line-height: 48px;
+cursor: pointer;
+z-index: 1;
+transition: all 0.6s ease;
+}
+.slide-controls label.signup{
+color: #000;
+}
+.slide-controls .slider-tab{
+position: absolute;
+height: 100%;
+width: 50%;
+left: 0;
+z-index: 0;
+border-radius: 5px;
+background: -webkit-linear-gradient(left, #9260db, #e524ef);
+
+
+transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+input[type="radio"]{
+display: none;
+}
+#signup:checked ~ .slider-tab{
+left: 50%;
+}
+#signup:checked ~ label.signup{
+color: #fff;
+cursor: default;
+user-select: none;
+}
+#signup:checked ~ label.login{
+color: #000;
+}
+#login:checked ~ label.signup{
+color: #000;
+}
+#login:checked ~ label.login{
+cursor: default;
+user-select: none;
+}
+.wrapper .form-container{
+width: 100%;
+overflow: hidden;
+}
+.form-container .form-inner {
+  display: flex;
+  width: 200%;
+  margin-top: 50;
+}
+.form-container .form-inner form{
+width: 50%;
+transition: all 0.6s cubic-bezier(0.68,-0.55,0.265,1.55);
+}
+.form-inner form .field{
+height: 100px;
+width: 100%;
+margin-top: 20px;
+}
+.form-inner form .field input{
+height: 100%;
+width: 100%;
+outline: none;
+padding-left: 15px;
+border-radius: 5px;
+border: 1px solid lightgrey;
+border-bottom-width: 2px;
+font-size: 17px;
+transition: all 0.3s ease;
+}
+.form-inner form .field input:focus{
+border-color: #fc83bb;
+/* box-shadow: inset 0 0 3px #fb6aae; */
+}
+.form-inner form .field input::placeholder{
+color: #999;
+transition: all 0.3s ease;
+}
+form .field input:focus::placeholder{
+color: #b3b3b3;
+}
+.form-inner form .pass-link{
+margin-top: 5px;
+}
+.form-inner form .signup-link{
+text-align: center;
+margin-top: 30px;
+}
+.form-inner form .pass-link a,
+.form-inner form .signup-link a{
+color: #fa4299;
+text-decoration: none;
+}
+.form-inner form .pass-link a:hover,
+.form-inner form .signup-link a:hover{
+text-decoration: underline;
+}
+form .btn{
+height: 50px;
+width: 100%;
+border-radius: 5px;
+position: relative;
+overflow: hidden;
+}
+form .btn .btn-layer{
+height: 100%;
+width: 300%;
+position: absolute;
+left: -100%;
+background: -webkit-linear-gradient(right, #a445b2, #fa4299, #a445b2, #fa4299);
+border-radius: 5px;
+transition: all 0.4s ease;;
+}
+form .btn:hover .btn-layer{
+left: 0;
+}
+form .btn input[type="submit"]{
+height: 100%;
+width: 100%;
+z-index: 1;
+position: relative;
+background: none;
+border: none;
+color: #fff;
+padding-left: 0;
+border-radius: 5px;
+font-size: 20px;
+font-weight: 500;
+cursor: pointer;
+}
+
+</style>
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>How to design Login and Registration Form Transition</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://images.pexels.com/photos/5524164/pexels-photo-5524164.jpeg?cs=srgb&dl=pexels-clayton-bunn-5524164.jpg&fm=jpg">
+</head>
+<body>
+  <div class="cont">
+      <div class="form"> 
+        <form id="signform" action="{% url 'signup' %}" enctype="multipart/form-data" name="signform" method="POST">
+        {% csrf_token %}
+              <h2>Sign In</h2>
+              <br>
+              <br>
+              <label>
+                  <span>UserName</span>
+                  <input type="text" name="usname" required>
+              </label>
+              <label>
+                  <span>Phone Number</span>
+                  <input type="text" name="phone" required>
+              </label>
+              <label>
+                  <span>Password</span>
+                  <input type="password" name="password2" required>
+              </label>
+              <label>
+              <button class="submit" type="submit" >Sign In</button>
+              </label>
+              <label>
+                <a class="forget-pass"  href="{% url 'forget' %}">Forget Password ?</a>
+              <label>
+                
+              <!-- Add font awesome icons -->
+                  <a href="#" class="fa fa-facebook"></a>
+                  <a href="#" class="fa fa-twitter"></a>
+                  <a href="#" class="fa fa-instagram"></a>
+                  <a href="#" class="fa fa-linkedin"></a>
+              </label>
+        </form>
+      </div>
+      <div class="sub-cont">
+          <div class="img">
+          <div class="img-text m-up">
+              <h2>New here?</h2>
+              <p>Sign up and discover great amount of new opportunities!</p>
+          </div>
+          <!-- <form id="loginform" action="{% url 'sign'%}" enctype="multipart/form-data" name="loginform" method="POST">
+        {% csrf_token %} -->
+          <div class="img-text m-in">
+              <div img src="{% static 'F:/djangopro1/demo6/app6/image/home.jpeg' %}"></div>
+              <h2>One of us?</h2>
+              <p>If already has an account,just sign in. We've missed you!</p>
+          </div>
+      <div class="img-btn">
+        <span class="m-up">Sign Up</span>
+        <span class="m-in">Sign In</span>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="title-text">
+        <div class="title login">
+Admin Form</div>
+<div class="title signup">
+User Form</div>
+</div>
+    <div class="form sign-up">
+<div class="form-container">
+      <div class="slide-controls">
+        <input type="radio" name="slide" id="login" checked>
+        <input type="radio" name="slide" id="signup">
+        <label for="login"  class="slide login">User</label>
+        <label for="signup" class="slide signup">Admin</label>
+        <div class="slider-tab">
+</div>
+</div>
+<div class="form-inner">
+        <form action="{% url 'sign' %}" class="login" method="POST">
+          {% csrf_token %}
+           <label>
+              <span>UserName</span>
+              <input type="text" name="usname" required>
+            </label>
+            <label>
+              <span>Phone Number</span>
+              <input type="text" name="phone" required>
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" required>
+            </label>
+            <label>
+              <span>Password</span>
+              <input type="password" name="password2" required>
+            </label>
+            <label>
+              <span>Confirm Password</span>
+              <input type="password" name="confpassword" required>
+            </label>
+          <button type="Submit" class="submit" >Sign Up Now</button>
+
+</form>
+
+<form action="{% url 'sign' %}" class="signup" method="POST">
+{% csrf_token %}
+  <label>
+      <span>UserName</span>
+      <input type="text" name="usname" required>
+  </label>
+  <label>
+      <span>Email</span>
+      <input type="email" name="email" required>
+  </label>
+  <label>
+    <span>Phone Number</span>
+    <input type="text" name="phone" required>
+  </label>
+  <label>
+      <span>Password</span>
+      <input type="password" name="password2" required>
+  </label>
+  <label>
+      <span>Confirm Password</span>
+      <input type="password" name="confpassword" required>
+ </label>
+  <button type="Submit" class="submit" >Sign Up Now</button>
+</form>
+
+<script type="text/javascript">document.querySelector('.img-btn').addEventListener('click', function()
+	{
+		document.querySelector('.cont').classList.toggle('s-signup')
+	}
+);
+</script>
+
+<script>
+  const loginText = document.querySelector(".title-text .login");
+    const loginForm = document.querySelector("form.login");
+    const loginBtn = document.querySelector("label.login");
+    const signupBtn = document.querySelector("label.signup");
+    const signupLink = document.querySelector("form .signup-link a");
+    signupBtn.onclick = (()=>{
+      loginForm.style.marginLeft = "-50%";
+      loginText.style.marginLeft = "-50%";
+    });
+    loginBtn.onclick = (()=>{
+      loginForm.style.marginLeft = "0%";
+      loginText.style.marginLeft = "0%";
+    });
+    signupLink.onclick = (()=>{
+      signupBtn.click();
+      return false;
+    });
+</script>
+
+</body>
+</html>

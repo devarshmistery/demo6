@@ -1,0 +1,216 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'fonts/notice/icomoon/style.css' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/notice/bootstrap.min.css' %}">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'css/notice/style.css' %}">
+    <title>Notice Board</title>
+  </head>
+  <body>
+
+  <div class="content" style="height:50%;">
+    <div class="container" style="margin-left:210px; margin-top:-80px;">
+      <div class="row align-items-stretch no-gutters contact-wrap">
+        <div class="col-md-8">
+          <div class="form h-100">
+            <h3>            </h3>
+            <form class="mb-5" method="POST" >
+            {% csrf_token %}
+              <div class="row">
+                <div class="col-md-6 form-group mb-5">
+                  <label for="" class="col-form-label">Name *</label>
+                  <input type="text" class="form-control" name="name" id="name" placeholder="Your name">
+                </div>
+                <div class="col-md-6 form-group mb-5">
+                  <label for="" class="col-form-label">Email *</label>
+                  <input type="text" class="form-control" name="email" id="email"  placeholder="Your email">
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 form-group mb-5">
+                  <label for="" class="col-form-label">Phone</label>
+                  <input type="text" class="form-control" name="phone" id="phone"  placeholder="Phone #">
+                </div>
+                <div class="col-md-6 form-group mb-5">
+                  <label for="" class="col-form-label">Notice Subject</label>
+                  <input type="text" class="form-control" name="noticesubject" id="company"  placeholder="Notice Subject">
+                </div>
+                <div class="col-md-6 form-group mb-5">
+                  <label for="" class="col-form-label">Date</label>
+                  <input type="date" class="form-control" name="date" placeholder="Enter Today's Date">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group mb-5">
+                  <label for="Notice" class="col-form-label">Enter the Notice *</label>
+                  <textarea class="form-control" name="Notice" id="Notice" cols="30" rows="4"  placeholder="Write your notice"></textarea>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <input type="submit" value="Send Notice" class="btn btn-primary rounded-0 py-2 px-4">
+                  <span class="submitting"></span>
+                </div>
+              </div>
+            </form>
+            <div id="form-message-warning mt-4"></div> 
+            <div id="form-message-success">
+              Your message was sent, thank you!
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-info h-100">
+            <h3>Notice Board</h3>
+            <p class="mb-5">   </p>
+            <ul class="list-unstyled">
+              <li class="d-flex">
+                <span class=""></span>
+                <span class="text">  </span>
+              </li>
+              <li class="d-flex">
+                <span class=""></span>
+                <span class="text"></span>
+              </li>
+              <li class="d-flex">
+                <span class=""></span>
+                <span class="text">  </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <script src="{% static 'js/notice/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'js/notice/popper.min.js' %}"></script>
+    <script src="{% static 'js/notice/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/notice/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'js/notice/main.js' %}"></script>
+
+<link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  <div class="sidenav">
+  <a href="{% url 'admindashboard' %}">Dashboard</a>
+  
+  
+  <button class="dropdown-btn">Notice Board
+  <i class="fa fa-angle-down"></i>
+  </button>
+  <div class="dropdown-container">
+  <a href="{% url 'notice' %}">Notices</a>
+  <a href="{% url 'viewnotice' %}">View All Notice</a>
+  </div>
+  
+  <button class="dropdown-btn">My Account
+  <i class="fa fa-caret-down"></i>
+  </button>
+
+  <div class="dropdown-container">
+	<a href="{% url 'profile' %}">Account</a>
+	<a href="{% url 'disprofile_data' %}">Viewprofile</a>
+  </div>
+
+  <button class="dropdown-btn">Manage Users
+  <i class="fa fa-angle-down"></i>
+  </button>
+
+  <div class="dropdown-container">
+	<a href="{% url 'loginlog' %}">User Login Log</a>
+  {% comment %} <a href="">Add Member</a> {% endcomment %}
+  </div>
+   
+  <button class="dropdown-btn">Complaints
+  <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+	<a href="{% url 'complaint' %}">Register Complaint</a>
+	<a href="{% url 'viewcomplaint' %}">View Complaints</a>
+  </div>
+	<script>var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}</script>
+</body>
+</html>
+
+<style>
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 50px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #f1f1f1;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  font-size 1rem;
+  outline: none;
+}
+
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #7571f9;
+}
+
+.main {
+  margin-left: 100px; 
+  font-size: 20px;
+  padding: 0px 10px;
+}
+
+.active {
+  background-color: #000000;
+    color: white;
+}
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+</style>
+  </body>
+</html>

@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Homepage Design- Online Society Management System</title>
+
+    <meta name="description" content="">
+    <meta name="keywords" content="About Us, Society Management System, Python, HTML, CSS, Template, favorite project, Online Society Management System, Login, Contact Us, INTUITIVE">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul class="nav__links">
+            
+               <a class="logo" href="/"><img src="" alt="OSMS"></a>
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="#About Us">About Us</a></li>
+                    <li><a href="#Feature">Feature</a></li>
+                    <li><a href="{% url 'admindashboard' %}">Dashboard</a></li>
+                </ul>
+            </nav>
+            <a class="cta" href="#Contact">Contact</a>
+            <p class="menu cta">Menu</p>
+        </header>
+        <div class="overlay">
+            <a class="close">&times;</a>
+            <div class="overlay__content">
+                <a href="{% url 'home' %}">Home</a>
+                <a href="#About Us">About Us</a>
+                <a href="#Feature">Feature</a>
+                <a href="{% url 'admindash' %}">Dashboard</a>
+            </div>
+			
+        </div>
+        <script type="text/javascript" src="mobile.js"></script>
+        <div class="banner-card">
+          <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/dfc30a69713081.5b8ae1a8bfd3f.jpg" >
+          <div class="banner-text">
+            <h4>Online Society Mangement System</h4>
+            <p>This system provides you a hassle-free platform to transform your society making it highly functional and easily manageable.</p>
+          </div>
+      
+          <div class="u-container-layout-1">
+            <h1 class="u-text1">About Us</h1>
+            <h5 class="u-text2">Our mission and goals</h5>
+            <p class="u-text3">We strive to create web application that is simple and economical of both means and gestures.&nbsp;Today’s modern society needs much modern solution for its proper management which can replace the human efforts.  Our Online Society Management&nbsp; is appropriate to its users and their purpose, that blends progressive
+                                                    technology with elemental form.</p>
+        </div>
+      <section id="info">
+    <div class="card">
+      <h6>Mission</h6>
+      <p>Our mission to reduces the conflicts that arise within the society by providing facilities such as  events management of society, repairing work managements, etc. </p>
+	  <p>It automates certain things that occurs within the society happenings and on goings.</p>
+    </div>
+    <div class="card">
+      <div class="row">
+      <h6>Functionality</h6><br>
+      <p>Society Management System provides User Management and for different society positions like admin, users, Member Etc. </p>
+	  <p>This System allows them to login with their own account and get updated with society happenings.</p>
+    </div></div>
+</section>
+	  
+	<div class="u-container-layout3">
+	  <h3>Features</h3>
+	  <h2 class="u-text-4">In Online Society Management System</h2>
+	</div>
+	
+	<div class="container">
+        <div class="card2">
+             <h4 class="classh4">01</h4>
+             <h6 class="classh6">Vendors Management</h6>
+         <div class="content">
+             <p>Details of vendors providing different services like Security, Housekeeping, Pest Control, Equipment Maintenance etc. can be stored and managed with Society Management.For all (AMC)Annual Maintainence Contracts, the system will track details such as due dates for payments, date of servicing, contract dates, etc.
+             </p>
+             <a href="#">Read More</a>
+         </div>
+       </div>
+       <div class="card2">
+               <h4 class="classh4">02</h4>
+               <h6 class="classh6">Notice Board</h6>
+           <div class="content">
+               <p>Manage all kinds of society meetings.Easily generate meeting by notice, agenda,minutes of meetings,it note the attendances and more online.
+               </p>
+               <a href="#">Read More</a>
+           </div>
+         </div>
+         <div class="card2">
+               <h4 class="classh4">03</h4>
+               <h6 class="classh6">Meetings Management</h6>
+           <div class="content">
+               <p>Details of vendors providing different services like Security, Housekeeping, Pest Control, Equipment Maintenance etc. can be stored and managed with Society Management.
+               </p>
+               <a href="#">Read More</a>
+           </div>
+          </div>
+        </div>      
+       </div>
+ 
+	   <section class="u-clearfix u-section-9" src="" id="carousel_e5bd" data-image-width="1124" data-image-height="750">
+            <h2 class="u-text-1">Contact Us</h2>
+                <div class="u-form-name">
+                  <label for="name-c01d" class="u-label">Name</label>
+                  <input type="text" placeholder="Enter your Name" id="name-c01d" name="name" class="u-input u-input-rectangle" required="">
+                </div>
+                <div class="u-form-email">
+                  <label for="email-c01d" class="u-label">Email</label>
+                  <input type="email" placeholder="Enter your Email" id="email-c01d" name="email" class="u-input u-input-rectangle" required="">
+                </div>
+                <div class="u-form-message">
+                  <label for="message-c01d" class="u-label">Message</label>
+                  <textarea placeholder="Enter your message" rows="4" cols="50" id="message-c01d" name="message" class="u-input u-input-rectangle" required=""></textarea>
+                </div>
+                <div class="u-form-submit">
+                  <a href="#" class="u-btn-1" type="submit" value="submit">Submit</a>
+                </div>
+               <!-- always visible <div class="u-form-send-success"> Thank you! Your message has been sent. </div>
+                <div class="u-form-send-error"> Unable to send your message. Please fix errors then try again. </div>
+                <input type="hidden" value="" name="recaptchaResponse"> -->
+    </section>
+	
+</body>
+</html>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=Montserrat:500');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 10%;
+  background-color: #24252a;
+  margin-right: 40px;
+  margin-left: 40px;
+}
+
+.logo {
+  cursor: pointer;
+  margin-right: 200px;
+  padding: 10px 15px;
+}
+
+.nav__links a,
+.cta,
+.overlay__content a {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+}
+
+.nav__links li {
+  padding: 10px 15px;
+}
+
+.nav__links li a {
+  transition: color 0.3s ease 0s;
+}
+
+.nav__links li a:hover {
+  color: #4169E1;
+}
+
+.cta {
+  padding: 10px 25px;
+  background-color: rgba(0, 136, 169, 1);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease 0s;
+}
+
+.cta:hover {
+  background-color: rgba(0, 136, 169, 0.8);
+}
+
+/* Mobile Nav */
+
+.menu {
+  display: none;
+}
+
+.overlay {
+  height: 40%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #050d36;
+  overflow-x: hidden;
+  transition: width 0.5s ease 0s;
+}
+
+.overlay--active {
+  width: 100%;
+}
+
+.overlay__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: color 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #0088a9;
+}
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 50px;
+  color: #edf0f1;
+}
+
+@media screen and (max-height: 400px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close {
+    font-size: 35px;
+    top: 10px;
+    right: 35px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .nav__links,
+  .cta {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+}
+.banner-card{
+  margin-right: 40px;
+  margin-left: 40px;
+  position: relative;
+}
+.banner-card img{
+  -webkit-user-select: none;
+  margin: auto;
+  background-color: hsl(0, 0%, 90%);
+  width:1270px;
+  height:500px;
+  filter: brightness(0.70);
+}
+.banner-text{
+  position: absolute;
+  top: 15%;
+  padding: 20px;
+}
+.banner-text h4{
+  max-width:40%;
+  color:#fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 3rem;
+  margin: 10px 5px 0 0px;
+}
+.banner-text p{
+  max-width:45%;
+  color:#fff;
+  font-size: 1.140rem;
+  margin: 8px 120px 0 5px;
+}
+
+.u-container-layout-1 {
+  margin-right: 0px;
+}
+.u-container-layout-1 .u-text1{
+  background-image: none;
+  font-weight: 900;
+  font-size: 3.2rem; 
+  margin-bottom:1px;
+  width: 450px;
+  margin-left: 10px;
+  font-family: Merriweather, serif !important;
+}
+.u-container-layout-1 .u-text2 {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom:2.5px;
+  margin-left: 10px;
+	color: #a35559 !important;
+}
+.u-container-layout-1  p:not(.u-text-variant) {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  max-width:50%;
+  margin-left: 10px;
+  font-size: 1.225rem;
+	}
+.container{
+  margin-left: 40px;
+}
+#info{
+  max-width: 40rem;
+  margin-left: 660px;
+  margin-top:-240px;
+  }
+.card{
+  display: inline-block;
+  width: 45.50%;
+  height: 50;
+  margin-top:70px;
+  padding: 1rem 2.8rem;
+  background-color: #e9eef3;
+  }
+/* .card1{
+  display: inline-block;
+  width: 45.50%;
+  margin-top: -240px;
+  margin-left: 290px;
+  padding: 3.3rem 1rem;
+  background-color:#ADD8E6;
+  } */
+  h6{
+  color: #3410AB;
+  margin-bottom: -0.5rem;
+  font-weight: 600;
+  font-size: 20px;
+  margin: 0.5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  }
+	h3{
+	text-transform: uppercase;
+	font-size: 2rem;
+  font-weight: 600;
+  margin-right:-10px;
+  margin: 0.5px;
+  padding: 0rem;
+  font-family: Merriweather, serif !important;
+  width: 500px;
+	}
+	h2 {
+    font-weight: 250;
+    font-size: 1.25rem;
+	}	
+	
+.container
+{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+.container .card2
+{
+    position: relative;
+    width: 280px;
+    height: 400px;
+    margin:50px;
+    box-shadow: 20px 20px 50px rgba(226, 162, 162, 0.781);
+    border-radius: 15px;
+    background:rgb(21,30,106);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.container .card2 .content
+{   width: 280px;
+    height: 400px;
+    background-color:rgb(229, 231, 241);
+    padding: 20px;
+    text-align: center;
+    transform: translateY(100px);
+    opacity: 0;
+    margin-right: -320px;
+    transition: 0.5s;
+    margin-left: -320px;
+}
+.container .card2:hover .content
+{   
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.classh4
+{
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 8em;
+    color:#dde3e9;
+    pointer-events: none;
+       
+}
+.classh6
+{
+  position: absolute;
+    top: 160px;
+    right: 90px;
+    font-size: 10;
+    margin-left: 10px;
+    color:#e9eef3;
+    pointer-events: none;
+}
+.container .card2 .content p 
+{
+  color:  rgb(0, 0, 0);
+  width: 100%;  
+  font-weight: 400;
+  padding: 0rem;
+  margin:  40px 0px;
+  font-family: Merriweather, serif;
+  font-size: 2;
+  margin-right: 10px;
+}
+.container .card2 .content a
+{
+   position: relative; 
+   display: inline-block;
+   padding: 8px 20px;
+   margin-top: 15px;
+   background: #fff;
+   color: #000;
+   border-radius: 20px;
+   text-decoration: none;
+   font-weight: 500;
+   box-shadow: 0 5px 15px rgba(241, 17, 17, 0.02);
+}
+
+.u-section-9 {
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://thewallpaper.co/wp-content/uploads/2020/08/black-and-white-night-building-house-monochrome-wallpapers-black-and-white-widescreen-images-dark-wallpapers-single-color-wallpapers-color-view-desktop-wallpaper-samsung-background-images-1600x1024-1-1200x768.jpg");
+  margin-bottom: 15px;
+  position: relative;
+  flex: 1;
+  color: #111111;
+  margin: auto 30px 30px;
+  max-width: 100%;
+  padding-left: 450px;
+  padding-right: 50px;
+}
+.u-text-1 {
+    position: relative;
+	  margin-top: 0;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+	  padding-left: 62px;
+    font-weight: 500;
+	  color: #ffffff;
+    font-family: Merriweather, serif !important;
+  	font-size: 3rem;
+  }
+.u-form-name{
+    font-weight: 200;
+    font-size: 2.255rem;
+    line-height: 1.6;
+  	margin-bottom: 15px;
+    color: #ffffff;
+	  font-family: Merriweather, serif !important;
+}
+.u-form-email{
+    font-weight: 200;
+    font-size: 2.255rem;
+    line-height: 1.6;
+  	margin-bottom: 15px;
+    color: #ffffff;
+  	font-family: Merriweather, serif !important;
+}
+.u-form-message{
+    font-weight: 200;
+    font-size: 2.255rem;
+    line-height: 1.6;
+    stroke: #ffffff;
+  	margin-bottom: 15px;
+    color: #ffffff;
+  	font-family: Merriweather, serif !important;
+}
+.u-input-rectangle{
+  border-color: #ffffff;
+  stroke: #ffffff;
+  border-style: solid;
+  flex-wrap: wrap;
+  background-color: #ffffff;
+  stroke: none;
+  align-items: flex-end;
+  font-weight: 200;
+  border-width: 1.25px;
+  padding: 10px 40px;
+  border-radius: 0;
+  margin-bottom: 15px;
+  margin-left: 75px;
+  align-self: flex-start;
+	}
+.u-input {
+  display: block;
+  width:30%;
+  padding: 20px 20px;
+  border-radius: 3px;
+  letter-spacing: normal;
+  color: #ffffff;
+  word-spacing: normal;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  background-color: transparent;
+  height: auto;
+  overflow: visible;
+}
+.u-label {
+  font-weight: normal;
+	display: none !important;
+	cursor: default;
+}
+.u-btn-1{
+  background-color: #b9c1cc !important;
+  font-size: 1.125rem;
+  color: #478ac9 !important;
+  font-style: initial;
+  white-space: nowrap;
+  display: table;
+  cursor: pointer;
+  font-weight: inherit;
+  text-decoration: none;
+  border: 0 none transparent;
+  outline-width: 0;
+  border-width: 0;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+  padding: 10px 30px;
+  border-radius: 0;
+  margin-bottom: 15px;
+  margin-left: 75px;
+  align-self: flex-start;
+}
+u-form-send-error{
+  color: #111111;
+}
+u-form-send-success{
+    font-size: 2rem;
+    line-height: 2.6;
+    color: #111111;
+    font-style: initial;
+    font-weight: 200;
+}
+
+</style>

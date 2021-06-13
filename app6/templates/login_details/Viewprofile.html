@@ -1,0 +1,285 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/viewprofile/style.css' %}">
+    <header>
+	  <h1><b>View My Profile </b></h1>
+</header>
+<div class="col-md-4">
+{% for i in Profile1 %}
+  <div class="profile-card-4 text-center"> <img width="300" height="300" src="{{ i.Pphoto.url }}" class="img img-responsive">{% comment %}https://lh3.googleusercontent.com/proxy/FLvBVts5hlsYGuQyhFvU0p89FLorcfP7KWtKwoYdgjVnSx2zb3rFCzVN1ZdXSTztVKDytvsKXPjlzIfvXYEd5jTSv1vhz3rcc4cSe_RY3QiCHFiubaB1r9oPHSbidrwWp05RmACqFw"> {% endcomment %} 
+    <div class="profile-content">
+        <div class="profile-name">{{ i.PName }}
+            <p>{{ i.Pemail }}</p>
+        </div>
+        <div class="profile-description"></div>
+        <div class="row">
+            <div class="col-xs-4">
+                <div class="profile-overview">
+                    <p>Flat_Type</p>
+                    <h4>{{ i.Pflattype }}</h4>
+                </div>
+            </div>
+            <div class="col-xs-4">
+                <div class="profile-overview">
+                    <p>Flat No.</p>
+                    <h4>{{ i.Pflatno }}</h4>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+	</div>
+{% endfor %}
+</div>
+</body>
+</html>
+<style>
+
+header {
+	position:relative;
+	left:120px;
+	bottom:10px;
+	width:100%;
+	min-height:15px;
+	padding:10px 0px;
+	color:#fff;
+	background: #000d1a no-repeat center center;
+	margin-bottom:10px
+}
+header h1 {
+    font-weight:300;
+    font-size:24px;
+    color:#eee;	
+	letter-spacing:2px;
+    margin-left:420px;
+	text-transform:uppercase;
+	margin: !important;
+}
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700,800,900|Open Sans:400,600,800');
+h1,
+h2,
+h3,
+h4,
+div,
+input,
+p,
+a {
+    font-family: "Open Sans";
+    margin: 0px;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+}
+
+body {
+    background-color: #F1F2F3;
+    margin-left:70px;
+}
+
+.container-fluid,
+.container {
+    max-width: 1220px;
+}
+
+.card-container {
+    padding: 120px 0px;
+    -webkit-perspective: 1000;
+    perspective: 1000;
+}
+.profile-card-4 {
+    max-width: 430px;
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    margin: 10px auto;
+    cursor: pointer;
+}
+
+.profile-card-4 img {
+    transition: all 0.25s linear;
+    size:30px;
+}
+
+.profile-card-4 .profile-content {
+    position: relative;
+    padding: 15px;
+    background-color: #FFF;
+}
+.profile-card-4 .profile-name {
+    font-weight: bold;
+    position: absolute;
+    left: 20px;
+    right: 0px;
+    top: -70px;
+    color: #FFF;
+    font-size: 20px;
+}
+.profile-card-4 .profile-name p {
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 1.5px;
+}
+
+.profile-card-4 .profile-description {
+    color:   #2C6F4F;
+    font-size: 17px;
+    padding: 10px;
+}
+
+.profile-card-4 .profile-overview {
+    padding: 15px 0px;
+}
+
+.profile-card-4 .profile-overview p {
+    font-size: 15px;
+    font-weight: 600;
+    color:  #2C6F4F;
+}
+
+.profile-card-4 .profile-overview h4 {
+    color: #273751;
+    font-weight: bold;
+}
+
+.profile-card-4 .profile-content::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    top: -10px;
+    left: 0px;
+    right: 0px;
+    background-color: #001a33;
+    z-index: 0;
+    transform: skewY(3deg);
+}
+.profile-card-4:hover img {
+    transform: rotate(5deg) scale(1.1, 1.1);
+    filter: brightness(110%);
+}
+</style>
+
+
+<link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
+  </head>
+  <body>
+  <div class="sidenav">
+  <a href="{% url 'admindashboard' %}">Dashboard</a>
+  
+  
+  <button class="dropdown-btn">Notice Board
+  <i class="fa fa-angle-down"></i>
+  </button>
+  <div class="dropdown-container">
+  <a href="{% url 'notice' %}">Notices</a>
+  <a href="{% url 'viewnotice' %}">View All Notice</a>
+  </div>
+  
+  <button class="dropdown-btn">My Account
+  <i class="fa fa-caret-down"></i>
+  </button>
+
+  <div class="dropdown-container">
+	<a href="{% url 'profile' %}">Account</a>
+	<a href="{% url 'viewprofile' %}">Viewprofile</a>
+  </div>
+
+  <button class="dropdown-btn">Manage Users
+  <i class="fa fa-angle-down"></i>
+  </button>
+
+  <div class="dropdown-container">
+	<a href="{% url 'loginlog' %}">User Login Log</a>
+  {% comment %} <a href="">Add Member</a> {% endcomment %}
+  </div>
+   
+  <button class="dropdown-btn">Complaints
+  <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+	<a href="{% url 'complaint' %}">Register Complaint</a>
+	<a href="{% url 'viewcomplaint' %}">View Complaints</a>
+  </div>
+	<script>var dropdown = document.getElementsByClassName("dropdown-btn");
+var i;
+
+for (i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+      dropdownContent.style.display = "none";
+    } else {
+      dropdownContent.style.display = "block";
+    }
+  });
+}</script>
+</body>
+</html>
+
+<style>
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 50px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #f1f1f1;
+  display: block;
+  border: none;
+  background: none;
+  width:100%;
+  text-align: left;
+  cursor: pointer;
+  font-size 1rem;
+  outline: none;
+}
+
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #7571f9;
+}
+
+.main {
+  margin-left: 100px; 
+  font-size: 20px;
+  padding: 0px 10px;
+}
+
+.active {
+  background-color: #000000;
+    color: white;
+}
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+</style>
+  </body>
+</html>
